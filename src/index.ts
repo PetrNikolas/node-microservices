@@ -61,7 +61,7 @@ server.listen(port, (err: any) => {
 	}
 
 	/** Success server running */
-	return console.log(`Server running at https://127.0.0.1:${port}`)
+	return console.log(`Server running at http://127.0.0.1:${port}`)
 })
 server.on('error', error)
 server.on('listening', listening)
