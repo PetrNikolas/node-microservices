@@ -8,6 +8,7 @@ import * as cors from 'cors'
 
 /** Node mailer libs */
 import * as nodemailer from 'nodemailer'
+
 const smtpTransport = require('nodemailer-smtp-transport')
 
 /** Lib for versioned routes */
@@ -63,7 +64,7 @@ class App {
 			html: req.body.content,
 		}
 
-		transport.sendMail(mailOptions, function(error, info) {
+		transport.sendMail(mailOptions, (error, info) => {
 			if (error) {
 				res.json({ code: 'error', msg: error })
 			} else {

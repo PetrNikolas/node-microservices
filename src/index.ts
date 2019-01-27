@@ -14,34 +14,34 @@ debug('ts-express:server')
 // Error handling
 //------------------------------------------------------------------------------
 function error(error: NodeJS.ErrnoException): void {
-  if (error.syscall !== 'listen') throw error
+	if (error.syscall !== 'listen') throw error
 
-  const bind = (typeof port === 'string') ? 'Pipe ' + port : 'Port ' + port
+	const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`
 
-  switch (error.code) {
-    case 'EACCES':
-      console.error(`${bind} requires elevated privileges`)
-      process.exit(1)
-      break
+	switch (error.code) {
+		case 'EACCES':
+			console.error(`${bind} requires elevated privileges`)
+			process.exit(1)
+			break
 
-    case 'EADDRINUSE':
-      console.error(`${bind} is already in use`)
-      process.exit(1)
-      break
+		case 'EADDRINUSE':
+			console.error(`${bind} is already in use`)
+			process.exit(1)
+			break
 
-    default:
-      throw error
-  }
+		default:
+			throw error
+	}
 }
 
 //------------------------------------------------------------------------------
 // Listening handling
 //------------------------------------------------------------------------------
 function listening(): void {
-  const addr = server.address()
-  const bind = (typeof addr === 'string') ? `pipe ${addr}` : `port ${addr.port}`
+	const addr = server.address()
+	const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`
 
-  debug(`Listening on ${bind}`)
+	debug(`Listening on ${bind}`)
 }
 
 //------------------------------------------------------------------------------
@@ -55,13 +55,13 @@ app.set('port', port)
 //------------------------------------------------------------------------------
 const server = http.createServer(app)
 server.listen(port, (err: any) => {
-  /** Error message */
-  if (err) {
-    return console.log(err)
-  }
+	/** Error message */
+	if (err) {
+		return console.log(err)
+	}
 
-  /** Success server running */
-  return console.log(`Server running at https://127.0.0.1:${port}`)
-});
+	/** Success server running */
+	return console.log(`Server running at https://127.0.0.1:${port}`)
+})
 server.on('error', error)
 server.on('listening', listening)

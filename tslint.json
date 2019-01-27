@@ -2,7 +2,7 @@
     "rules": {
         "class-name": true,
         "indent": [
-            true,
+            false,
             "spaces"
         ],
         "one-line": [
