@@ -57,6 +57,7 @@
     "nodemailer-smtp-transport": "^2.7.4",
     "setprototypeof": "^1.0.3",
     "supertest": "^3.0.0",
+    "threads": "0.12.0",
     "totoro-node": "^1.1.5"
   },
   "devDependencies": {

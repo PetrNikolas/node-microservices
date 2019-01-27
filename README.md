@@ -27,20 +27,24 @@ Node.js project for microservices written in Typescript.
 
 ## Development
 
-1. Run `npm run build` to compile TypeScript files to JavaScript.
-2. Run `npm start` to build the project and visit [http://localhost:3000/](http://localhost:3000/).
+- Run `npm run build` to compile TypeScript files to JavaScript.
+- Run `npm start` to build the project and visit [http://localhost:3000/](http://localhost:3000/).
 
 Or you can run just only `npm run serve` and visit [http://localhost:3000/](http://localhost:3000/).
 
 ## Lint
 
-1. Run `npm run lint:ci` to lint your code with TSLint and format code with Prettier.
+- Run `npm run lint:ci` to lint your code with TSLint and format code with Prettier.
 
 ## Tests
 
-1. Run `npm run mocha` for Mocha tests.
-2. Run `npm run jest` for Jest tests.
+- Run `npm run mocha` for Mocha tests.
+- Run `npm run jest` for Jest tests.
 
 ## Debug
 
-1. Run `npm run debug` for debug your code.
+- Run `npm run debug` for debug your code.
+
+## Documentation
+
+- Documentation is [here.](./Documentation.md)
