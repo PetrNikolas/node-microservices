@@ -34,8 +34,7 @@ Or you can run just only `npm run serve` and visit [http://localhost:3000/](http
 
 ## Lint
 
-1. Run `npm run lint` to lint your code with ESLint.
-2. Run `npm run tslint` to lint your code with TSLint.
+1. Run `npm run lint:ci` to lint your code with TSLint and format code with Prettier.
 
 ## Tests
 
