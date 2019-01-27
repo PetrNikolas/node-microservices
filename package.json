@@ -1,5 +1,5 @@
 {
-  "name": "serviceman",
+  "name": "node-microservices",
   "main": "dist/app.js",
   "version": "0.0.2",
   "private": true,

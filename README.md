@@ -1,4 +1,4 @@
-# Serviceman
+# Node Microservices
 
 Node.js project for microservices written in Typescript.
 
