@@ -78,6 +78,7 @@
     "prettier": "^1.16.1",
     "ts-jest": "^19.0.14",
     "tslint": "^5.7.0",
+    "tslint-config-security": "1.15.0",
     "typescript": "^2.5.2",
     "typescript-eslint-parser": "^8.0.0"
   }

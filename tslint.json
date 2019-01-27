@@ -1,4 +1,5 @@
 {
+    "extends": ["tslint-config-security"],
     "rules": {
         "class-name": true,
         "indent": [
