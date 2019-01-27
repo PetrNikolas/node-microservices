@@ -42,6 +42,10 @@ class App {
 	}
 
 	private sendEmail(apiVersion: any, req: any, res: any, next: any) {
+		// if (!isAuthorized(req)) {
+		// return res.status(403).send('You are not authorized!');
+		// }
+
 		/** Sending emails via Nodemailer */
 		const transport = nodemailer.createTransport(
 			smtpTransport({
