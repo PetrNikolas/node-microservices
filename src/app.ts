@@ -3,6 +3,7 @@
 //------------------------------------------------------------------------------
 import * as express from 'express'
 import * as bodyParser from 'body-parser'
+import * as compression from 'compression'
 import * as logger from 'morgan'
 import * as cors from 'cors'
 
@@ -21,6 +22,7 @@ class App {
 	/** Define variables */
 	public express: express.Application
 	public bodyParser: any
+	public compression: any
 	public cors: any
 	public nodemailer: any
 	public smtpTransport: any
@@ -31,6 +33,7 @@ class App {
 		this.middleware()
 		this.cors = cors()
 		this.bodyParser = bodyParser.json()
+		this.compression = compression()
 		this.routes()
 	}
 
@@ -38,6 +41,7 @@ class App {
 	private middleware(): void {
 		this.express.use(logger('dev'))
 		this.express.use(bodyParser.json())
+		this.express.use(compression())
 		this.express.use(bodyParser.urlencoded({ extended: false }))
 	}
 
