@@ -22,7 +22,6 @@ class App {
 	/** Define variables */
 	public express: express.Application
 	public bodyParser: any
-	public compression: any
 	public cors: any
 	public nodemailer: any
 	public smtpTransport: any
@@ -33,7 +32,6 @@ class App {
 		this.middleware()
 		this.cors = cors()
 		this.bodyParser = bodyParser.json()
-		this.compression = compression()
 		this.routes()
 	}
 
