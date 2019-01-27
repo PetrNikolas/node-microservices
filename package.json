@@ -9,8 +9,9 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node dist/index.js",
-    "build": "npm run ts && npm run tslint",
+    "build": "npm run clean && npm run ts && npm run tslint",
     "debug": "npm run ts && npm run inspect",
+    "clean": "rimraf dist",
     "ts": "tsc",
     "jest": "jest --forceExit",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
