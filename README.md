@@ -1,10 +1,6 @@
-# Node Microservices
+# Node.js email service
 
-Node.js project for microservices written in Typescript.
-
-## Project includes these services
-
-- service for sending e-mails
+Node.js email service written in Typescript.
 
 ## Libs
 

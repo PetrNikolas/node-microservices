@@ -1,8 +1,8 @@
 /** Node mailer libs */
-import * as nodemailer from 'nodemailer'
-const smtpTransport = require('nodemailer-smtp-transport')
+import * as nodemailer from 'nodemailer';
+const smtpTransport = require('nodemailer-smtp-transport');
 
-class EmailsService {
+class EmailService {
 	public sendEmail(apiVersion: any, req: any, res: any, next: any) {
 		// if (!isAuthorized(req)) {
 		// return res.status(403).send('You are not authorized!');
@@ -22,26 +22,26 @@ class EmailsService {
 						pass: 'YOUR-PASSWORD',
 					},
 				})
-			)
+			);
 
 			const mailOptions = {
 				from: 'example@gmail.com',
 				to: req.body.email,
 				subject: req.body.subject,
 				html: req.body.content,
-			}
+			};
 
 			transport.sendMail(mailOptions, (error, info) => {
 				if (error) {
-					res.json({ code: 'error', msg: error })
+					res.json({ code: 'error', msg: error });
 				} else {
-					res.json({ code: 'success', msg: 'Message sent, thank you!' })
+					res.json({ code: 'success', msg: 'Message sent, thank you!' });
 				}
-			})
+			});
 		} catch (e) {
-			res.status(500).send('Internal Server Error')
+			res.status(500).send('Internal Server Error');
 		}
 	}
 }
 
-export default new EmailsService().sendEmail
+export default new EmailService().sendEmail;

@@ -1,19 +1,10 @@
-//------------------------------------------------------------------------------
-// Import all packages
-//------------------------------------------------------------------------------
-import {} from 'jest'
-import * as supertest from 'supertest'
+import {} from 'jest';
+import * as supertest from 'supertest';
 
-//------------------------------------------------------------------------------
-// Request url for testing
-//------------------------------------------------------------------------------
-const request = supertest('http://localhost:3000')
+const request = supertest('http://localhost:3000');
 
-//------------------------------------------------------------------------------
-// Test
-//------------------------------------------------------------------------------
 describe('GET /random-url', () => {
 	it('should return 404', done => {
-		request.get('/reset').expect(404, done)
-	})
-})
+		request.get('/reset').expect(404, done);
+	});
+});

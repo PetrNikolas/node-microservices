@@ -1,7 +1,7 @@
 {
-  "name": "node-microservices",
+  "name": "node-email-service",
   "main": "dist/app.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "engines": {
     "node": ">=8.1.4",
@@ -17,7 +17,7 @@
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "format:write": "prettier --config '.prettierrc.json' {src,test}/**/*.{ts,json,md} --write",
     "mocha": "tsc && mocha dist/**/*.spec.js",
-    "lint:ci": "npm run tslint && npm run format:write",
+    "lint:ci": "npm run format:write && npm run tslint",
     "inspect": "node --inspect dist/",
     "serve": "npm run build && NODE_ENV=development npm start",
     "precommit": "lint-staged && npm run lint:ci",
